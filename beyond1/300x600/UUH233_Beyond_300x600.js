@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"UUH233_Beyond_300x600_atlas_P_1", frames: [[0,0,600,1200]]}
+		{name:"UUH233_Beyond_300x600_atlas_P_1", frames: [[0,0,600,1200],[0,1202,600,500]]}
 ];
 
 
@@ -26,9 +26,16 @@ lib.ssMetadata = [
 
 
 
-(lib.logos_300x600 = function() {
+(lib._300x600_beyond1 = function() {
 	this.initialize(ss["UUH233_Beyond_300x600_atlas_P_1"]);
 	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.logos_300x250 = function() {
+	this.initialize(ss["UUH233_Beyond_300x600_atlas_P_1"]);
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -451,20 +458,20 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(120));
 
 	// LOGOs
-	this.instance = new lib.logos_300x600();
-	this.instance.setTransform(0,0,0.5,0.5);
+	this.instance = new lib.logos_300x250();
+	this.instance.setTransform(0,10,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(120));
 
 	// HEAD1a
 	this.instance_1 = new lib.HEAD1a();
-	this.instance_1.setTransform(-87.2,224.5,1,1,0,0,0,96.8,34.5);
+	this.instance_1.setTransform(-87.2,324.5,1,1,0,0,0,96.8,34.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({x:111.55},23,cjs.Ease.quadOut).wait(97));
 
 	// HEAD1b
 	this.instance_2 = new lib.HEAD1b();
-	this.instance_2.setTransform(161.75,389,1,1,0,0,0,-150.5,0);
+	this.instance_2.setTransform(161.75,489,1,1,0,0,0,-150.5,0);
 	this.instance_2._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(23).to({_off:false},0).wait(97));
@@ -478,7 +485,7 @@ if (reversed == null) { reversed = false; }
 
 	// HEAD1b shad
 	this.instance_3 = new lib.HEAD1b();
-	this.instance_3.setTransform(161.75,389,1,1,0,0,0,-150.5,0);
+	this.instance_3.setTransform(161.75,489,1,1,0,0,0,-150.5,0);
 	this.instance_3.alpha = 0.3984;
 	this.instance_3.shadow = new cjs.Shadow("rgba(0,0,0,1)",6,6,10);
 	this.instance_3._off = true;
@@ -493,16 +500,23 @@ if (reversed == null) { reversed = false; }
 
 	// CTA
 	this.instance_4 = new lib.CTA();
-	this.instance_4.setTransform(78.5,529.55,1,1,0,0,0,60.5,15);
+	this.instance_4.setTransform(81.5,549.55,1,1,0,0,0,60.5,15);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(95).to({regX:60.6,regY:15.1,scaleX:1.1,scaleY:1.1,y:529.6},2).to({regX:60.5,regY:15,scaleX:1,scaleY:1,y:529.55},7,cjs.Ease.quadOut).wait(16));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(95).to({regX:60.6,regY:15.1,scaleX:1.1,scaleY:1.1,y:549.6},2).to({regX:60.5,regY:15,scaleX:1,scaleY:1,y:549.55},7,cjs.Ease.quadOut).wait(16));
 
 	// grad
 	this.instance_5 = new lib.grad();
 	this.instance_5.setTransform(265,300,1,2.3999,0,0,0,-35,125);
 	this.instance_5.alpha = 0.1992;
+	this.instance_5.compositeOperation = "multiply";
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(120));
+
+	// PIC
+	this.instance_6 = new lib._300x600_beyond1();
+	this.instance_6.setTransform(0,0,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(120));
 
 	// bkgd
 	this.shape_1 = new cjs.Shape();
@@ -510,6 +524,17 @@ if (reversed == null) { reversed = false; }
 	this.shape_1.setTransform(150,300);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape_1).wait(120));
+
+	// stageBackground
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("rgba(0,0,0,0)").ss(1,1,1,3,true).p("EgY/gwbMAx/AAAMAAABg3Mgx/AAAg");
+	this.shape_2.setTransform(150,300);
+
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#333333").s().p("EgY/AwcMAAAhg3MAx/AAAMAAABg3g");
+	this.shape_3.setTransform(150,300);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_3},{t:this.shape_2}]}).wait(120));
 
 	this._renderFirstFrame();
 
@@ -524,7 +549,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/UUH233_Beyond_300x600_atlas_P_1.png?1632867516397", id:"UUH233_Beyond_300x600_atlas_P_1"}
+		{src:"images/UUH233_Beyond_300x600_atlas_P_1.png?1632934262748", id:"UUH233_Beyond_300x600_atlas_P_1"}
 	],
 	preloads: []
 };
