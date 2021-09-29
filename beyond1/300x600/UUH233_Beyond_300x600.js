@@ -508,13 +508,24 @@ if (reversed == null) { reversed = false; }
 	this.instance_5 = new lib.grad();
 	this.instance_5.setTransform(265,300,1,2.3999,0,0,0,-35,125);
 	this.instance_5.alpha = 0.1992;
-	this.instance_5.compositeOperation = "multiply";
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(120));
+
+	// mask (mask)
+	var mask_1 = new cjs.Shape();
+	mask_1._off = true;
+	mask_1.graphics.p("EgR6Au4MAAAhdvMAj2AAAMAAABdvg");
+	mask_1.setTransform(115.25,300);
 
 	// PIC
 	this.instance_6 = new lib._300x600_beyond1();
 	this.instance_6.setTransform(0,0,0.5,0.5);
+
+	var maskedShapeInstanceList = [this.instance_6];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask_1;
+	}
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(120));
 
@@ -524,17 +535,6 @@ if (reversed == null) { reversed = false; }
 	this.shape_1.setTransform(150,300);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape_1).wait(120));
-
-	// stageBackground
-	this.shape_2 = new cjs.Shape();
-	this.shape_2.graphics.f().s("rgba(0,0,0,0)").ss(1,1,1,3,true).p("EgY/gwbMAx/AAAMAAABg3Mgx/AAAg");
-	this.shape_2.setTransform(150,300);
-
-	this.shape_3 = new cjs.Shape();
-	this.shape_3.graphics.f("#333333").s().p("EgY/AwcMAAAhg3MAx/AAAMAAABg3g");
-	this.shape_3.setTransform(150,300);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_3},{t:this.shape_2}]}).wait(120));
 
 	this._renderFirstFrame();
 
@@ -549,7 +549,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/UUH233_Beyond_300x600_atlas_P_1.png?1632934262748", id:"UUH233_Beyond_300x600_atlas_P_1"}
+		{src:"images/UUH233_Beyond_300x600_atlas_P_1.png?1632954899530", id:"UUH233_Beyond_300x600_atlas_P_1"}
 	],
 	preloads: []
 };
