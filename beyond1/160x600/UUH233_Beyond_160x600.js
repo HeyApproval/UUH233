@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"UUH233_Beyond_160x600_atlas_P_1", frames: [[0,0,600,1200],[602,0,320,1200]]}
+		{name:"UUH233_Beyond_160x600_atlas_P_1", frames: [[0,0,320,1200],[322,0,320,1200]]}
 ];
 
 
@@ -26,7 +26,7 @@ lib.ssMetadata = [
 
 
 
-(lib._300x600_beyond1 = function() {
+(lib._160x600_beyond1 = function() {
 	this.initialize(ss["UUH233_Beyond_160x600_atlas_P_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -512,8 +512,8 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(120));
 
 	// PIC
-	this.instance_6 = new lib._300x600_beyond1();
-	this.instance_6.setTransform(-45,25,0.5,0.5);
+	this.instance_6 = new lib._160x600_beyond1();
+	this.instance_6.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(120));
 
@@ -527,7 +527,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-67.3,299.5,322.3,325.5);
+p.nominalBounds = new cjs.Rectangle(-67.3,299.5,266.3,301);
 // library properties:
 lib.properties = {
 	id: '0957C5EC3B874C629166840920B09671',
@@ -537,7 +537,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/UUH233_Beyond_160x600_atlas_P_1.png?1632934221339", id:"UUH233_Beyond_160x600_atlas_P_1"}
+		{src:"images/UUH233_Beyond_160x600_atlas_P_1.png?1632954908307", id:"UUH233_Beyond_160x600_atlas_P_1"}
 	],
 	preloads: []
 };
