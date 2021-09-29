@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"UUH233_Further_160x600_atlas_P_1", frames: [[0,0,320,1200],[322,0,320,1200]]}
+		{name:"UUH233_Further_160x600_atlas_P_1", frames: [[0,0,600,1200],[602,0,320,1200]]}
 ];
 
 
@@ -26,7 +26,7 @@ lib.ssMetadata = [
 
 
 
-(lib._160x600_beyond1 = function() {
+(lib._300x600_further = function() {
 	this.initialize(ss["UUH233_Further_160x600_atlas_P_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -782,9 +782,21 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(120));
 
+	// mask (mask)
+	var mask_1 = new cjs.Shape();
+	mask_1._off = true;
+	mask_1.graphics.p("EgKEAu4MAAAhdvIUJAAMAAABdvg");
+	mask_1.setTransform(64.5,300);
+
 	// PIC
-	this.instance_6 = new lib._160x600_beyond1();
-	this.instance_6.setTransform(0,0,0.5,0.5);
+	this.instance_6 = new lib._300x600_further();
+	this.instance_6.setTransform(-51,24,0.5,0.5);
+
+	var maskedShapeInstanceList = [this.instance_6];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask_1;
+	}
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(120));
 
@@ -808,7 +820,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/UUH233_Further_160x600_atlas_P_1.png?1632947153488", id:"UUH233_Further_160x600_atlas_P_1"}
+		{src:"images/UUH233_Further_160x600_atlas_P_1.png?1632948736136", id:"UUH233_Further_160x600_atlas_P_1"}
 	],
 	preloads: []
 };

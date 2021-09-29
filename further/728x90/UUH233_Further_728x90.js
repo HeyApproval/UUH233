@@ -26,7 +26,7 @@ lib.ssMetadata = [
 
 
 
-(lib._300x600_beyond1 = function() {
+(lib._300x600_beyond2 = function() {
 	this.initialize(ss["UUH233_Further_728x90_atlas_P_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -796,7 +796,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(120));
 
 	// PIC
-	this.instance_6 = new lib._300x600_beyond1();
+	this.instance_6 = new lib._300x600_beyond2();
 	this.instance_6.setTransform(130,-59,0.3,0.3);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(120));
@@ -821,7 +821,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/UUH233_Further_728x90_atlas_P_1.png?1632947167575", id:"UUH233_Further_728x90_atlas_P_1"}
+		{src:"images/UUH233_Further_728x90_atlas_P_1.png?1632948686784", id:"UUH233_Further_728x90_atlas_P_1"}
 	],
 	preloads: []
 };

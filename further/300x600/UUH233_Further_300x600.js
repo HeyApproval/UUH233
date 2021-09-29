@@ -26,7 +26,7 @@ lib.ssMetadata = [
 
 
 
-(lib._300x600_beyond1 = function() {
+(lib._300x600_further = function() {
 	this.initialize(ss["UUH233_Further_300x600_atlas_P_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -789,7 +789,7 @@ if (reversed == null) { reversed = false; }
 	mask_1.setTransform(115.25,300);
 
 	// PIC
-	this.instance_6 = new lib._300x600_beyond1();
+	this.instance_6 = new lib._300x600_further();
 	this.instance_6.setTransform(0,0,0.5,0.5);
 
 	var maskedShapeInstanceList = [this.instance_6];
@@ -820,7 +820,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/UUH233_Further_300x600_atlas_P_1.png?1632947129404", id:"UUH233_Further_300x600_atlas_P_1"}
+		{src:"images/UUH233_Further_300x600_atlas_P_1.png?1632948695540", id:"UUH233_Further_300x600_atlas_P_1"}
 	],
 	preloads: []
 };
